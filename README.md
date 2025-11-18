@@ -1,23 +1,117 @@
 # IMPRESSRD-
 Programa Java que usa JNA para acessar funções de uma DLL de impressoras Elgin. Permite configurar e abrir conexão, imprimir texto, QR Code, código de barras, XML SAT e cancelamento, além de acionar gaveta e sinal sonoro. Possui menu interativo para executar cada função.
 
-Este projeto demonstra como integrar Java com impressoras Elgin utilizando a biblioteca JNA para acessar funções da DLL E1_Impressora01.dll. Para utilizá-lo, o usuário receberá um arquivo compactado chamado impressaord.zip, que contém toda a estrutura do projeto já organizada. O primeiro passo é descompactar esse arquivo. Para isso, basta clicar com o botão direito no arquivo ZIP e escolher a opção “Extrair aqui”, “Extrair tudo” ou qualquer opção semelhante do seu descompactador (WinRAR, 7-Zip ou o próprio Windows). Isso criará uma pasta chamada impressaord contendo todo o projeto Java.
-Depois de descompactado, abra o IntelliJ IDEA. Em vez de criar um novo projeto manualmente, clique na opção “Open” (Abrir) na tela inicial do IntelliJ. Uma janela será aberta permitindo navegar pelas pastas do computador. Acesse a pasta que você acabou de extrair. Dentro dela você verá a pasta principal do projeto chamada:
 
-.Idea → Java-Aluno Graduacao → Java-Aluno Graduacao
+📌 Sobre o Projeto
 
-Selecione a pasta Java-Aluno Graduacao (a segunda), que contém os arquivos do projeto Java, e clique em OK ou Open. O IntelliJ automaticamente reconhecerá o projeto e o carregará, preservando toda a estrutura original.
-Clique no arquivo Main.java, que contém o código principal da aplicação. Com o arquivo aberto, o IntelliJ exibirá um botão verde de execução (▶) ao lado do método main. Basta clicar nesse botão para iniciar o programa.
-Antes de executar, é importante garantir que a DLL E1_Impressora01.dll, responsável por toda a comunicação com a impressora, esteja exatamente no mesmo caminho configurado dentro do código.
+Este repositório demonstra como integrar Java com impressoras Elgin, utilizando a biblioteca JNA para acessar funções diretamente da DLL E1_Impressora01.dll.
+Ele funciona como um painel de testes profissional, permitindo imprimir textos, QR Codes, códigos de barras, XMLs SAT, abrir gaveta, controlar beeps e muito mais — tudo via terminal, usando apenas números.
 
-O primeiro passo para usar o programa é configurar a conexão com a impressora. Para isso, quando o menu aparecer na tela, você deve digitar o número 1 e apertar Enter. O sistema vai pedir algumas informações importantes. A primeira é o tipo de conexão, que significa como a impressora está ligada ao computador — por exemplo, USB. Depois, ele vai pedir o modelo da impressora, que é simplesmente o nome da impressora Elgin que você está usando. Em seguida, o programa perguntará o endereço da conexão, que pode ser uma porta USB e parametro 0. Por último, ele pede um parâmetro, que é um número adicional usado pela DLL para finalizar essa configuração; normalmente você recebe esse valor na documentação da impressora ou mantém o padrão.
+Ideal tanto para iniciantes quanto para integrações reais em sistemas comerciais.
 
-Depois de configurar tudo isso, você deve escolher a opção 2 no menu para realmente abrir a conexão. O programa tentará se comunicar com a impressora usando todas as informações que você digitou. Se a impressora responder corretamente, o programa mostra um retorno igual a 0, indicando que deu tudo certo. Isso significa que a impressora está pronta para receber comandos.
+✨ Funcionalidades
+🖨️ Impressão
 
-Quando a conexão está aberta, várias opções ficam liberadas para uso. Se você digitar 3, o sistema permite que você escreva um texto e ele será impresso na hora. Se você digitar 4, pode digitar qualquer frase, link ou código, e a impressora irá gerar um QR Code com essa informação. A opção 5 imprime um código de barras configurado dentro do código como exemplo, útil para testes. A opção 6 imprime um arquivo XML SAT, que é um documento fiscal usado em vendas de vários estados do Brasil, especialmente no varejo. A opção 7 faz o mesmo com um XML de cancelamento, que é o documento enviado quando uma venda é anulada. Em todas as impressões, o programa chama um comando adicional que faz o corte automático do papel, como acontece em impressoras térmicas de lojas e mercados.
+Texto
 
-Além de imprimir, o programa também controla partes físicas da impressora. A opção 8 abre a gaveta da impressora Elgin — aquela gaveta onde fica o dinheiro no caixa. A opção 9 abre a gaveta, mas usando parâmetros personalizados, o que permite controlar intensidade e tempo do sinal enviado para acionamento. Já a opção 10 faz a impressora emitir um sinal sonoro, como um bip ou alerta, que pode ser usado para chamar a atenção do operador.
+QR Code
 
-Quando você terminar de usar a impressora, basta selecionar a opção 0 no menu. Isso faz o programa mandar o comando para fechar a conexão com a impressora, algo muito importante para evitar erros nas próximas vezes que ela for usada. Depois disso, o programa é encerrado com segurança.
+Código de barras
 
-De forma geral, esse projeto funciona como um painel de testes que permite tanto enviar impressões quanto controlar funções físicas da impressora, tudo de maneira simples, usando apenas números no teclado. Ele é ideal para quem precisa integrar impressoras Elgin a um sistema Java, mesmo que ainda não conheça programação profundamente.
+XML SAT
+
+XML de cancelamento
+
+Corte automático de papel
+
+🔌 Comunicação
+
+Configuração completa de conexão
+
+Abertura e fechamento de porta
+
+Suporte a parâmetros personalizados
+
+💵 Parte Física
+
+Abertura de gaveta
+
+Abertura com parâmetros customizados
+
+Emissão de bip/sinal sonoro
+
+🚀 Primeiros Passos
+📦 1. Baixar e Extrair
+
+Você receberá o arquivo:
+
+impressaord.zip
+
+
+Para extrair:
+➡ Botão direito → Extrair aqui / Extrair tudo / Extract
+Uma pasta chamada impressaord/ será criada com a estrutura completa.
+
+💡 2. Abrindo no IntelliJ IDEA
+
+Abra o IntelliJ
+
+Clique em Open (Abrir)
+
+Navegue até a pasta extraída
+
+Selecione:
+
+impressaord/
+ └── Java-Aluno Graduacao/
+      └── Java-Aluno Graduacao/   ← SELECIONAR ESTA PASTA
+
+
+O IntelliJ irá carregar tudo automaticamente.
+
+▶️ 3. Executando
+
+Abra Main.java
+
+Clique no botão verde ▶ ao lado do main
+
+Certifique-se de que a DLL E1_Impressora01.dll está no caminho configurado dentro do código
+
+🧭 Menu do Programa
+
+Após iniciar, o menu aparece no console.
+Digite o número correspondente à ação desejada:
+
+Opção	Função
+1	🔧 Configurar impressora
+2	🔗 Abrir conexão
+3	📝 Imprimir texto
+4	📱 Imprimir QR Code
+5	🏷️ Imprimir código de barras
+6	🧾 Imprimir XML SAT
+7	❌ Imprimir XML de cancelamento
+8	💵 Abrir gaveta padrão
+9	🛠️ Abrir gaveta customizada
+10	🔊 Emitir beep
+0	🔒 Fechar conexão e encerrar
+
+Retorno 0 = Sucesso
+Qualquer outro valor indica erro retornado pela DLL.
+
+🗂️ Estrutura Simplificada
+impressaord/
+ ├── Java-Aluno Graduacao/
+ │    ├── src/
+ │    │    ├── Main.java
+ │    │    ├── PrinterLib.java
+ │    │    └── ...
+ │    └── lib/
+ │         └── E1_Impressora01.dll
+ └── README.md
+
+ 
+❤️ Conclusão
+
+Este projeto oferece um ambiente completo para testes e integração com impressoras Elgin utilizando Java, servindo tanto como ferramenta didática quanto recurso profissional.
+
+Se quiser, posso adicion
