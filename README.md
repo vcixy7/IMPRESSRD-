@@ -9,6 +9,12 @@ Ele funciona como um painel de testes profissional, permitindo imprimir textos, 
 
 Ideal tanto para iniciantes quanto para integrações reais em sistemas comerciais.
 
+📌 Abrindo o Projeto
+
+Para Abrir o projeto prescisa baixar o arquivo impressaord Zip, ao baixar o arquivo o encontre ele no explorador de arquivos, e extraia os arquivos do arquivo baixado, logo em seguida abra a pasta impressaord, e depois abra a pasta Java-Aluno Graduaçao abra de novo Java- Aluno graduacao E abra o Arquivo Main
+
+
+
 ✨ Funcionalidades
 🖨️ Impressão
 
